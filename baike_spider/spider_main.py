@@ -27,8 +27,8 @@ class SpiderMain(object):
             try:
                 new_url = self.urls.get_new_url()           #这里使用到了类中的具体方法，先把要用到的方法名写好，之后再去写具体的实现方法。
                 print 'craw %d : %s' %(count, new_url)
-                html_cont = self.downloader.download(new_url)                        
-                new_urls, new_data = self.parser.parse(new_url, html_cont)  #这里为何需要new_url？？？
+                html_cont = self.downloader.download(new_url)   #这里的变量存放的是什么格式的变量                  
+                new_urls, new_data = self.parser.parse(new_url, html_cont)  #这里为何需要new_url？？？ 最后返回的new_urls是个set()
                 self.urls.add_new_urls(new_urls)
                 self.outputer.collect_data(new_data)    #这个方法是在干什么？？？          
                 if count == number:                     #这里的number是我们需要爬取的网页的总数目。
