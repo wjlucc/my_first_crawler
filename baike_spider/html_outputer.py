@@ -8,3 +8,19 @@ Created on 2015年12月27日
 
 
 
+class HtmlOutputer(object):
+    
+    
+    def collect_data(self):
+        pass
+
+    
+    def output_html(self):
+        pass
+    
+    
+    
+    
+
+
+

@@ -8,3 +8,13 @@ Created on 2015年12月27日
 
 
 
+class HtmlParser(object):
+    
+    
+    def parse(self):
+        pass
+    
+    
+
+
+
