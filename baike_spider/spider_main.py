@@ -7,6 +7,8 @@ Created on 2015年12月27日
 from baike_spider import url_manager, html_downloader, html_parser,\
     html_outputer
 
+
+
 #为什么要把这个爬虫类创建在这里？创建在一个新的模块中会更好吧？
 #这个爬虫总调度程序会使用url管理器，html下载器和解析器，输出器四个对象来完成所需要的功能。一种管理器被定义成了一个对象。面向对象编程。
 #用到的这些模块中的对象会在该爬虫的构造函数中初始化。
@@ -38,10 +40,12 @@ class SpiderMain(object):
                 print 'craw failed'                     #这里非常好，同时处理了多个异常，只要出现了问题就不爬取这个网页。打印失败，并且还没有count+1            
         self.outputer.output_html()                     #这个方法又是在做什么？ 
 
-if __name__ == "main":
+if __name__ == "__main__":
     root_url = "http://baike.baidu.com/view/21087.htm"
     obj_spider = SpiderMain()
-    obj_spider.craw(root_url, 1000) 
+    print '爬虫开始工作'
+    obj_spider.craw(root_url, 20) 
+    print '爬取结束'
 
 
 

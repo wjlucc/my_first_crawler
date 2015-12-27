@@ -11,7 +11,7 @@ class HtmlOutputer(object):
         self.datas = []  #list用来存放收集到的全部数据，每个元素是个dict结构。
     
     def collect_data(self, data): #用于收集数据
-        if data is None:
+        if data is None or data == {}:
             return 
         self.datas.append(data)
 
