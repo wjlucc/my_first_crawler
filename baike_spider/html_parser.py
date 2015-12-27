@@ -30,17 +30,11 @@ class HtmlParser(object):
         #<dd class="lemmaWgt-lemmaTitle-title"><h1>Python</h1></dd>
         title_node = soup.find('dd',class_='lemmaWgt-lemmaTitle-title').find('h1')  #两次find最终能得到标题的标签。
         title = title_node.get_text()
-        
-        if len(title) == 1:
-            return {}
         res_data['title'] = title
         
         #<div class="lemma-summary" label-module="lemmaSummary">
         summary_node = soup.find("div", class_='lemma-summary')        
         summary = summary_node.get_text()
-        if len(summary) == 1:
-            print 'jdkfjkdfdddddddddddddddddddddd'
-            return {}
         res_data['summary'] = summary
         
         return res_data 
