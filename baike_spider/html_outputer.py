@@ -14,7 +14,6 @@ class HtmlOutputer(object):
         if data is None or data == {}:
             return 
         self.datas.append(data)
-
     
     def output_html(self):  #用于将收集好的数据写出到一个html文件中。对象自身维护一个list表。
         fout = open('result.html','w')
@@ -31,12 +30,3 @@ class HtmlOutputer(object):
         fout.write('</html>')
         fout.close()
         
-        
-
-
-    
-    
-    
-
-
-

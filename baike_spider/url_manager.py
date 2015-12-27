@@ -19,11 +19,12 @@ class UrlManager(object):
             return 
         self.new_urls.add(url)            
     
-    def add_new_urls(self, urls):
+    #这里传进来的urls是的集合set()
+    def add_new_urls(self, urls):   
         if urls == None:            #if urls is None or len(urls) == 0
             return 
-        for url in urls:                 #需不需要考虑传进来的urls是个什么类型？？？ 
-            self.add_new_url(url)        #如何调用自己类中的方法，self这样引用已经定义好的方法可以吧？??
+        for url in urls:                 #需不需要考虑传进来的urls是个什么类型？？？写这个模块的时候就要想到传进来的urls是个set吧。 
+            self.add_new_url(url)        #如何调用自己类中的方法，self这样引用已经定义好的方法可以吧？??可以。
         
     
     def has_new_url(self):

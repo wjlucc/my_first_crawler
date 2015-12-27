@@ -16,7 +16,7 @@ class HtmlDownloader(object):
         response = urllib2.urlopen(url)
         
         if response.getcode() == 200:   
-            return response.read()      #这里返回去的是个什么类型的变量？？？
+            return response.read()      #这里返回去的是个什么类型的变量？？？不关心类型，只要另一个parser能够解析就行？？？什么时候考虑这点？
         else:
             return None
             
