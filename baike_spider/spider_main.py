@@ -55,6 +55,3 @@ if __name__ == "__main__":
     print '爬虫开始工作'
     obj_spider.craw(root_url, 1) 
     print '爬取结束'
-
-
-
